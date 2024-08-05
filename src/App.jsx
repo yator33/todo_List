@@ -6,7 +6,7 @@ function App() {
   const [newTodoNmae, setNewTodoName] = useState("")
   const [todos, setTodo] = useState([])
 
-  function addNewTodos(){
+  function addNewTodos(e){
     e.preventDefault()
     if(newTodoNmae === "") return
     setTodo(currentTodods => {

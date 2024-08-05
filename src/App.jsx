@@ -53,7 +53,7 @@ function App() {
         
 
           <form onSubmit={addNewTodos} id="new-todo-form">
-            {JSON.stringify(todos)}
+            
             <label for="todo-input">New Todo</label>
             <input 
             type="text" 

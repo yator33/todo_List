@@ -7,6 +7,7 @@ function App() {
   const [todos, setTodo] = useState([])
 
   function addNewTodos(){
+    e.preventDefault()
     if(newTodoNmae === "") return
     setTodo(currentTodods => {
       
@@ -51,7 +52,7 @@ function App() {
          </ul>
         
 
-          <form id="new-todo-form">
+          <form onSubmit={addNewTodos} id="new-todo-form">
             {JSON.stringify(todos)}
             <label for="todo-input">New Todo</label>
             <input 
@@ -60,7 +61,7 @@ function App() {
             value={newTodoNmae}
             onChange={e => setNewTodoName(e.target.value)} 
             />
-            <button onClick={addNewTodos}>Add Todo</button>
+            <button>Add Todo</button>
           </form>    
     </>
   )
